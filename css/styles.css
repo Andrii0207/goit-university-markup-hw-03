@@ -61,8 +61,12 @@ button {
   max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 141px;
-  margin-right: 141px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding: 60px 0;
 }
 
 .visually-hidden {
@@ -82,13 +86,32 @@ button {
 
 /* ======= HEADER ======= */
 
+.header-section {
+  border-bottom: 1px solid var(--cornflower-color);
+  background: var(--secondary-white-color);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-link {
+  margin-right: 76px;
+  padding: 24px 0;
+}
+
 .header-logo {
   font-family: var(--secondaty-font);
   color: var(--iris-color);
   font-size: 18px;
   font-weight: 800;
   line-height: 1.17;
-  letter-spacing: 0.61em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -96,11 +119,18 @@ button {
   color: var(--navyblue-color);
 }
 
+.navigation-list {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+}
+
 .navigation-link {
+  padding: 24px 0;
   color: var(--navyblue-color);
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.02em;
 }
 
 .navigation-link:hover,
@@ -108,18 +138,30 @@ button {
   color: var(--ocean-color);
 }
 
+.contact-list {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+}
+
 .contact-link {
+  padding: 24px 0;
   font-family: var(--primary-font);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.02em;
   color: var(--slate-color);
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: var(--ocean-color);
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
 }
 
 .address-link {
@@ -132,25 +174,42 @@ button {
 
 .hero-section {
   background-color: var(--navyblue-color);
+  flex-direction: column;
+  margin-bottom: 60px;
 }
 
 .hero-title {
+  padding-bottom: 48px;
   font-size: 56px;
   line-height: 1.07;
-  letter-spacing: 1.12px;
+  letter-spacing: 0.02em;
   text-align: center;
   color: var(--secondary-white-color);
 }
 
+.hero-wrapper {
+  max-width: 496px;
+  padding: 188px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero-button {
+  display: block;
+  min-width: 169px;
+  padding: 16px 32px;
   color: var(--secondary-white-color);
   font-family: var(--primary-font);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
+  margin-left: auto;
+  margin-right: auto;
 
-  background: var(--iris-color);
+  border-radius: 4px;
+  background-color: var(--iris-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -163,6 +222,7 @@ button {
 /* ======= BENEFITS ======= */
 
 .benefits-item-title {
+  margin-bottom: 8px;
   color: var(--navyblue-color);
   font-size: 20px;
   font-weight: 500;
@@ -170,9 +230,14 @@ button {
   letter-spacing: 0.4px;
 }
 
+.benefits-list {
+  display: flex;
+  column-gap: 24px;
+}
+
 .benefits-description {
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
 }
 
 /* ======= /BENEFITS ======= */
@@ -180,12 +245,19 @@ button {
 /* ======= WHAT ARE WE DOING ======= */
 
 .product-title {
+  margin-bottom: 72px;
+
   color: var(--navyblue-color);
   font-size: 36px;
   line-height: 1.11;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
+}
+
+.product-list {
+  display: flex;
+  column-gap: 24px;
 }
 
 /* ======= /WHAT ARE WE DOING ======= */
@@ -194,15 +266,24 @@ button {
 
 .team-section {
   background: var(--cloud-color);
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-title {
+  padding-bottom: 72px;
+
   color: var(--navyblue-color);
   font-size: 36px;
   line-height: 1.11;
-  letter-spacing: 0.72px;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
   text-align: center;
+}
+
+.team-list {
+  display: flex;
+  column-gap: 24px;
 }
 
 .team-item {
@@ -210,22 +291,43 @@ button {
 }
 
 .team-worker-name {
+  margin-bottom: 8px;
   color: var(--navyblue-color);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.team-worker-position-wrapper {
+  margin: 24px 0;
 }
 
 .team-worker-position {
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 /* ======= /OUR TEAM ======= */
 
 /* ======= PORTFOLIO ======= */
+
+.portfolio-wrapper {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio-navigation-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 24px;
+
+  margin-bottom: 72px;
+}
 
 .portfolio-navigation {
   border: 1px solid var(--cornflower-color);
@@ -237,7 +339,24 @@ button {
 
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.portfolio-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 16px;
+
+  border: 1px solid var(--cornflower-color);
+  border-top: 1px solid transparent;
+  background: var(--secondary-white-color);
 }
 
 .portfolio-title {
@@ -246,7 +365,7 @@ button {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.02em;
 }
 
 .portfolio-direction {
@@ -255,18 +374,24 @@ button {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
 }
 
 .portfolio-button {
+  padding: 12px 24px;
+
   font-family: var(--primary-font);
   background-color: var(--cloud-color);
   color: var(--iris-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
   border: 1px solid var(--cornflower-color);
+
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-button:hover,
@@ -280,7 +405,19 @@ button {
 /* ======= FOOTER ======= */
 
 .main-footer {
+  padding-top: 84px;
+  padding-bottom: 100px;
   background-color: var(--navyblue-color);
+}
+
+.footer-wrapper {
+  max-width: 264px;
+}
+
+.footer-link {
+  display: inline-block;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .footer-logo {
@@ -289,7 +426,7 @@ button {
   font-size: 18px;
   font-weight: 800;
   line-height: 1.17;
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -302,7 +439,7 @@ button {
   font-family: var(--primary-font);
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
 }
 
 /* ======= /FOOTER ======= */
