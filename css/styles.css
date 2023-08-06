@@ -98,6 +98,7 @@ button {
 
 .header-nav {
   display: flex;
+  align-items: center;
 }
 
 .header-link {
@@ -121,7 +122,7 @@ button {
 
 .navigation-list {
   display: flex;
-  column-gap: 40px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -140,7 +141,7 @@ button {
 
 .contact-list {
   display: flex;
-  column-gap: 40px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -175,11 +176,15 @@ button {
 .hero-section {
   background-color: var(--navyblue-color);
   flex-direction: column;
-  margin-bottom: 60px;
+  padding: 188px 0;
 }
 
 .hero-title {
+  max-width: 496px;
   padding-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
@@ -187,16 +192,11 @@ button {
   color: var(--secondary-white-color);
 }
 
-.hero-wrapper {
-  max-width: 496px;
-  padding: 188px 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .hero-button {
   display: block;
   min-width: 169px;
+  height: 56px;
+  text-align: center;
   padding: 16px 32px;
   color: var(--secondary-white-color);
   font-family: var(--primary-font);
@@ -207,6 +207,7 @@ button {
   margin-left: auto;
   margin-right: auto;
 
+  border: none;
   border-radius: 4px;
   background-color: var(--iris-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -221,6 +222,10 @@ button {
 
 /* ======= BENEFITS ======= */
 
+.benefits-section {
+  padding: 120px 0;
+}
+
 .benefits-item-title {
   margin-bottom: 8px;
   color: var(--navyblue-color);
@@ -232,7 +237,11 @@ button {
 
 .benefits-list {
   display: flex;
-  column-gap: 24px;
+  gap: 24px;
+}
+
+.benefits-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .benefits-description {
@@ -243,6 +252,10 @@ button {
 /* ======= /BENEFITS ======= */
 
 /* ======= WHAT ARE WE DOING ======= */
+
+.product-section {
+  padding-bottom: 120px;
+}
 
 .product-title {
   margin-bottom: 72px;
@@ -315,7 +328,7 @@ button {
 
 /* ======= PORTFOLIO ======= */
 
-.portfolio-wrapper {
+.portfolio-section {
   padding-top: 96px;
   padding-bottom: 120px;
 }
@@ -324,12 +337,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 24px;
+  gap: 24px;
 
   margin-bottom: 72px;
-}
 
-.portfolio-navigation {
   border: 1px solid var(--cornflower-color);
   background: var(--cloud-color);
 
@@ -351,15 +362,15 @@ button {
 .portfolio-card-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   padding: 32px 16px;
 
   border: 1px solid var(--cornflower-color);
-  border-top: 1px solid transparent;
+  border-top: none;
   background: var(--secondary-white-color);
 }
 
 .portfolio-title {
+  margin-bottom: 8px;
   color: var(--navyblue-color);
   font-family: var(--primary-font);
   font-size: 20px;
@@ -398,6 +409,7 @@ button {
 .portfolio-button:focus {
   background-color: var(--ocean-color);
   color: var(--secondary-white-color);
+  border: 1px solid transparent;
 }
 
 /* ======= /PORTFOLIO ======= */
@@ -405,19 +417,14 @@ button {
 /* ======= FOOTER ======= */
 
 .main-footer {
-  padding-top: 84px;
-  padding-bottom: 100px;
+  padding: 100px 0;
   background-color: var(--navyblue-color);
-}
-
-.footer-wrapper {
-  max-width: 264px;
 }
 
 .footer-link {
   display: inline-block;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .footer-logo {
@@ -435,6 +442,7 @@ button {
 }
 
 .footer-description {
+  max-width: 264px;
   color: var(--primary-white-color);
   font-family: var(--primary-font);
   font-size: 16px;
